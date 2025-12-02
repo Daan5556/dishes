@@ -1,9 +1,10 @@
+import path from "path";
+import fs from "fs";
 import { sentenceCase } from "change-case";
 
 export default {
   tags: ["dish"],
   layout: "layout/dish.njk",
-  image: "dish.png",
   favicon: "favicon.svg",
 
   permalink: function ({ page: { fileSlug }, draft }) {
@@ -31,6 +32,19 @@ export default {
 
     description: function ({ dish, country, page: { date } }) {
       return `${dish} from ${country} cooked on ${date.toLocaleDateString()}.`;
+    },
+
+    image: ({ draft, page: { inputPath } }) => {
+      if (draft) return;
+
+      const dir = path.dirname(inputPath);
+      const files = fs.readdirSync(dir);
+      const image = files.find((file) =>
+        /^dish\.(jpe?g|png|gif|webp|svg)$/i.test(file),
+      );
+
+      if (!image) throw new Error("No valid image provided!");
+      return image;
     },
   },
 };
