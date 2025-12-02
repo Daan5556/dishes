@@ -1,4 +1,5 @@
 source .env
+eval "$(/root/.local/share/fnm/fnm env)"
 
 git pull --ff-only
 
