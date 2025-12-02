@@ -31,5 +31,6 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_HOST }} << 'EOF'
             cd ${{ secrets.PROJECT_DIR }}
+            git pull --ff-only
             docker compose up 
           EOF
