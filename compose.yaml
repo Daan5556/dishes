@@ -1,0 +1,10 @@
+services:
+  eleventy:
+    image: node:22
+    environment:
+      - CI=TRUE
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ${OUTPUT_DIR}:/app/_site
+    command: sh -c "rm -fr /app/_site/* && npm install -g pnpm && pnpm install && pnpm build"
