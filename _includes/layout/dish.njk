@@ -1,0 +1,11 @@
+---
+layout: layout/base.njk
+---
+
+<h2>{{ country }}</h2>
+
+<img src="{{ image }}" width="300" alt="{{ dish }}" />
+
+<p>Cooked on {{ formattedDate }}</p>
+
+{{ content | safe }}
