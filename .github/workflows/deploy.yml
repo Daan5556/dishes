@@ -31,5 +31,5 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_HOST }} << 'EOF'
             cd ${{ secrets.PROJECT_DIR }}
-            ./scripts/build.sh
+            docker compose up 
           EOF
