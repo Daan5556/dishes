@@ -7,7 +7,7 @@
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "caddy": "caddy file-server --root _site -l :9999",
     "generate-templates": "node scripts/generate-templates.js"
   },
   "keywords": [],
