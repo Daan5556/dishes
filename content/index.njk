@@ -1,0 +1,18 @@
+{% set cooked = collections.publishedDishes.length %}
+{% set total = collections.dish.length %}
+
+<p>Cooked dishes: {{ cooked }}</p>
+<p>Total dishes: {{ total }}</p>
+
+{% for region in regions %}
+  <h2>{{ region | capitalize }}</h2>
+  <ul>
+    {% for dish in collections[region] %}
+      {% if dish.data.draft %}
+        <li>{{ dish.data.country }}</li>
+      {% else %}
+        <a href="{{ dish.url }}"><li>{{ dish.data.country }}</li></a>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}

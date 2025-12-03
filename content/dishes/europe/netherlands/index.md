@@ -1,6 +1,4 @@
 ---
-dish:
-date: 
-draft: true
+dish: Stampot
+date: 2025-12-02
 ---
-
