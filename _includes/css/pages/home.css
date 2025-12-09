@@ -1,0 +1,13 @@
+.banner.home .current-count {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: var(--primary);
+}
+
+.banner.home {
+  font-size: 1.3rem;
+  text-align: center;
+  opacity: 0.8;
+  font-weight: 700;
+}

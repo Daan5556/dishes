@@ -1,0 +1,8 @@
+.banner {
+  background-color: var(--second-background);
+  padding: 1rem;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}

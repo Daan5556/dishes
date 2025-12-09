@@ -1,8 +1,11 @@
 {% set cooked = collections.publishedDishes.length %}
 {% set total = collections.dish.length %}
 
-<div>
+<section class="banner home">
   <p>I'm cooking a dish from every country.</p>
-  <p><span class="current-count">{{ cooked }}</span>/{{ total }}</p>
-  <p>completed dishes</p>
-</div>
+
+  <figure class="progress">
+    <p><span class="current-count">{{ cooked }}</span> / {{ total }}</p>
+    <figcaption>Completed dishes</figcaption>
+  </figure>
+</section>
