@@ -22,6 +22,7 @@
     "clean-css": "^5.3.3",
     "luxon": "^3.7.2",
     "prettier": "^3.7.3",
-    "prettier-plugin-jinja-template": "^2.1.0"
+    "prettier-plugin-jinja-template": "^2.1.0",
+    "unlighthouse": "^0.17.4"
   }
 }
