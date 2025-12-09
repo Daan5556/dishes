@@ -7,4 +7,4 @@ services:
     volumes:
       - ./:/app
       - ${OUTPUT_DIR}:/app/_site
-    command: sh -c "rm -fr /app/_site/* && npm install -g pnpm && pnpm install && pnpm build"
+    command: sh -c "rm -fr /app/_site/* && npm install -g pnpm && pnpm install --prod && pnpm build"
