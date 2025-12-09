@@ -30,6 +30,11 @@ export default {
       return date.toLocaleDateString("en-GB", options);
     },
 
+    formattedMonth: function ({ page: { date } }) {
+      const options = { month: "long", year: "numeric" };
+      return date.toLocaleDateString("en-GB", options);
+    },
+
     description: function ({ dish, country, page: { date } }) {
       return `${dish} from ${country} cooked on ${date.toLocaleDateString()}.`;
     },
@@ -45,6 +50,16 @@ export default {
 
       if (!image) throw new Error("No valid image provided!");
       return image;
+    },
+
+    dishNumber: function (data) {
+      const { collections, page } = data;
+
+      const dishes = collections.dish.sort((a, b) => a.date - b.date);
+
+      const index = dishes.findIndex((d) => d.inputPath === page.inputPath);
+
+      return index + 1; // Make it 1-based
     },
   },
 };

@@ -7,7 +7,18 @@
       {% if dish.data.draft %}
         <li>{{ dish.data.country }}</li>
       {% else %}
-        <li><a href="{{ dish.url }}">{{ dish.data.country }}</a></li>
+        <li>
+          <div>
+            <p>{{ dish.data.dishNumber }}</p>
+            <div>
+              <a href="{{ dish.url }}"
+                ><h3 class="">{{ dish.data.country }}</h3></a
+              >
+              <p class="dish-name">{{ dish.data.dish }}</p>
+              <p class="active">{{ dish.data.formattedMonth }}</p>
+            </div>
+          </div>
+        </li>
       {% endif %}
     {% endfor %}
   </ul>
