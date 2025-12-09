@@ -10,7 +10,8 @@ export default function (eleventyConfig) {
     .addPassthroughCopy("**/favicon.svg", {
       mode: "html-relative",
     })
-    .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+    .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl")
+    .addPassthroughCopy("./content/robots.txt");
 
   eleventyConfig.addCollection("publishedDishes", function (api) {
     return api.getFilteredByTag("dish").filter((item) => !item.data.draft);
