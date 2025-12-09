@@ -11,3 +11,23 @@
   opacity: 0.8;
   font-weight: 700;
 }
+
+.dish-number {
+  width: 30px;
+  font-weight: bold;
+  color: var(--text-subtle);
+}
+.dish {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1em;
+}
+
+.dish-name {
+  font-weight: 900;
+}
+
+.draft {
+  color: var(--accent);
+}
