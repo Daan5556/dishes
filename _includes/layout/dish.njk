@@ -7,6 +7,6 @@ layout: layout/base.njk
 <p>{{ dish }}</p>
 <p>{{ formattedDate }}</p>
 
-<img src="{{ image }}" width="300" alt="{{ dish }}" />
+<img src="{{ image }}" fetchpriority="high" width="300" alt="{{ dish }}" />
 
 {{ content | safe }}
