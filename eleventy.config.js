@@ -4,9 +4,11 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
-  eleventyConfig.addPassthroughCopy("**/favicon.svg", {
-    mode: "html-relative",
-  });
+  eleventyConfig
+    .addPassthroughCopy("**/favicon.svg", {
+      mode: "html-relative",
+    })
+    .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
   eleventyConfig.addCollection("publishedDishes", function (api) {
     return api.getFilteredByTag("dish").filter((item) => !item.data.draft);
@@ -15,6 +17,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed.xml",
+    stylesheet: "feed/pretty-atom-feed.xsl",
     collection: {
       name: "publishedDishes",
       limit: 10, // 0 means no limit
