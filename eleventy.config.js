@@ -1,6 +1,7 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { DateTime } from "luxon";
+import CleanCSS from "clean-css";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
@@ -37,6 +38,10 @@ export default function (eleventyConfig) {
         name: "Daan",
       },
     },
+  });
+
+  eleventyConfig.addFilter("cssmin", function (code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 }
 
