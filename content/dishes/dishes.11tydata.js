@@ -59,7 +59,9 @@ export default {
     dishNumber: function (data) {
       const { collections, page } = data;
 
-      const dishes = collections.dish.sort((a, b) => a.date - b.date);
+      const dishes = collections.publishedDishes.sort(
+        (a, b) => a.date - b.date,
+      );
 
       const index = dishes.findIndex((d) => d.inputPath === page.inputPath);
 
