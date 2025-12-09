@@ -35,6 +35,10 @@ export default {
       return date.toLocaleDateString("en-GB", options);
     },
 
+    isoDate: function ({ page: { date } }) {
+      return date.toISOString().split("T")[0];
+    },
+
     description: function ({ dish, country, page: { date } }) {
       return `${dish} from ${country} cooked on ${date.toLocaleDateString()}.`;
     },

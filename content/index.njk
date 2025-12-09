@@ -2,24 +2,30 @@
 
 {% for region in regions %}
   <h2>{{ region | capitalize }}</h2>
+
   <ul>
     {% for dish in collections[region] | sort(attribute='data.country') %}
-      {% if dish.data.draft %}
-        <li>{{ dish.data.country }}</li>
-      {% else %}
-        <li>
-          <div>
-            <p>{{ dish.data.dishNumber }}</p>
-            <div>
-              <a href="{{ dish.url }}"
-                ><h3 class="">{{ dish.data.country }}</h3></a
-              >
-              <p class="dish-name">{{ dish.data.dish }}</p>
-              <p class="active">{{ dish.data.formattedMonth }}</p>
-            </div>
-          </div>
-        </li>
-      {% endif %}
+      <li>
+        {% if dish.data.draft %}
+          <article class="dish draft">
+            <h3>{{ dish.data.country }}</h3>
+          </article>
+        {% else %}
+          <article class="dish">
+            <p class="dish-number">{{ dish.data.dishNumber }}</p>
+
+            <h3>
+              <a href="{{ dish.url }}">{{ dish.data.country }}</a>
+            </h3>
+
+            <p class="dish-name">{{ dish.data.dish }}</p>
+
+            <time datetime="{{ dish.data.isoDate }}"
+              >{{ dish.data.formattedMonth }}</time
+            >
+          </article>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 {% endfor %}
