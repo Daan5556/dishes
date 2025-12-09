@@ -12,7 +12,12 @@
 		<style>{% include "css/index.css" %}</style>
   </head>
   <header>
-    <h1>Dishes</h1>
+      <a href="/"><h1>Dishes</h1></a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="https://github.com/daan5556/dishes">Github</a></li>
+        <li><a href="/feed.xml">Feed</a></li>
+      </ul>
   </header>
   <body>
     <main id="main">{{ content | safe }}</main>
