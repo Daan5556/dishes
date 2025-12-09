@@ -10,7 +10,7 @@ export default {
   permalink: function ({ page: { fileSlug }, draft }) {
     if (draft) return false;
 
-    return `/${fileSlug}/`;
+    return `/cooked/${fileSlug}/`;
   },
 
   eleventyComputed: {
