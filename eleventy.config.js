@@ -1,5 +1,6 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import { DateTime } from "luxon";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
@@ -12,6 +13,11 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addCollection("publishedDishes", function (api) {
     return api.getFilteredByTag("dish").filter((item) => !item.data.draft);
+  });
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
   eleventyConfig.addPlugin(feedPlugin, {

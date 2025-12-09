@@ -4,8 +4,9 @@ layout: layout/base.njk
 
 <h2>{{ country }}</h2>
 
-<img src="{{ image }}" width="300" alt="{{ dish }}" />
+<p>{{ dish }}</p>
+<p>{{ formattedDate }}</p>
 
-<p>Cooked on {{ formattedDate }}</p>
+<img src="{{ image }}" width="300" alt="{{ dish }}" />
 
 {{ content | safe }}
