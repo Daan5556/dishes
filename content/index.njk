@@ -1,8 +1,4 @@
-{% set cooked = collections.publishedDishes.length %}
-{% set total = collections.dish.length %}
-
-<p>Cooked dishes: {{ cooked }}</p>
-<p>Total dishes: {{ total }}</p>
+{% include "home/banner.njk" %}
 
 {% for region in regions %}
   <h2>{{ region | capitalize }}</h2>
