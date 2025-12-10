@@ -9,7 +9,11 @@
   font-size: 1.3rem;
   text-align: center;
   opacity: 0.8;
-  font-weight: 700;
+}
+
+.banner.home p,
+figcaption {
+  font-weight: 500;
 }
 
 .dish-number {
@@ -30,4 +34,8 @@
 
 .draft {
   color: var(--accent);
+}
+
+time {
+  color: var(--secondary);
 }
