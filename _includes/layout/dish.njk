@@ -3,7 +3,7 @@ layout: layout/base.njk
 ---
 
 <div class="banner dish">
-  <h2>{{ country }}</h2>
+  <a href="{{ page.url }}"><h2>{{ country }}</h2></a>
 
   <p>{{ dish }}</p>
   <time datetime="{{ isoDate }}">{{ formattedDate }}</time>
