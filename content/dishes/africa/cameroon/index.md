@@ -1,6 +1,5 @@
 ---
 dish:
-date: 
+date:
 draft: true
 ---
-
