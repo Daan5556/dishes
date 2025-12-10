@@ -28,8 +28,13 @@ figcaption {
   margin-bottom: 1em;
 }
 
+.dish h3 {
+  font-size: 1rem;
+}
+
 .dish-name {
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .draft {
@@ -38,4 +43,6 @@ figcaption {
 
 time {
   color: var(--secondary);
+  font-style: italic;
+  font-size: 0.9rem;
 }
