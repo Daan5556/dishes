@@ -2,11 +2,13 @@
 layout: layout/base.njk
 ---
 
-<h2>{{ country }}</h2>
+<div class="banner dish">
+  <h2>{{ country }}</h2>
 
-<p>{{ dish }}</p>
-<p>{{ formattedDate }}</p>
+  <p>{{ dish }}</p>
+  <time datetime="{{ isoDate }}">{{ formattedDate }}</time>
 
-<img src="{{ image }}" fetchpriority="high" width="300" alt="{{ dish }}" />
+  <img src="{{ image }}" fetchpriority="high" width="400" alt="{{ dish }}" />
+</div>
 
 {{ content | safe }}
