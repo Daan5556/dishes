@@ -1,12 +1,14 @@
 .banner.dish {
   display: block;
   padding-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .banner.dish img {
   border-radius: 12px;
   margin: 0px auto;
   margin-top: 1rem;
+  height: auto;
 }
 
 .banner.dish h2 {
