@@ -63,6 +63,10 @@ header ul {
   gap: 1rem;
 }
 
+strong {
+  font-weight: bold;
+}
+
 main {
   padding: 1rem;
 }
