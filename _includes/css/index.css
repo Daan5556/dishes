@@ -67,6 +67,10 @@ strong {
   font-weight: bold;
 }
 
+em {
+  font-style: italic;
+}
+
 main {
   padding: 1rem;
 }
