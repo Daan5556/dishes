@@ -4,11 +4,14 @@
   margin-top: 0.5rem;
 }
 
+img {
+  height: auto;
+  margin: 1rem auto;
+}
+
 .banner.dish img {
   border-radius: 12px;
-  margin: 0px auto;
   margin-top: 1rem;
-  height: auto;
 }
 
 .banner.dish h2 {
